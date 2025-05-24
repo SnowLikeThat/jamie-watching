@@ -171,7 +171,7 @@ func corsMiddleware(next http.Handler) http.Handler {
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/currently-watching", getCurrentlyWatching)
+	mux.HandleFunc("/", getCurrentlyWatching)
 
 	handler := corsMiddleware(mux)
 
